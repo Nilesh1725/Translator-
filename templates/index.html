@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Neural Translator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>🌍 Neural Language Translator</h1>
+
+    <form method="POST">
+        <textarea name="text" placeholder="Enter text here..." required></textarea>
+
+        <div class="selectors">
+            <select name="source">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="pa">Punjabi</option>
+            </select>
+
+            <span>→</span>
+
+            <select name="target">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="pa">Punjabi</option>
+            </select>
+        </div>
+
+        <button type="submit">Translate</button>
+    </form>
+
+    <div class="output">
+        {{ result }}
+    </div>
+</div>
+</body>
+</html>
